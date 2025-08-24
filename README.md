@@ -33,5 +33,25 @@ Included files & Story of the project:
      - Histogram of projects in time with highlighted surplus due to Covid 19 pandemic
      - Line plot and heatmap of the ratio of succesful projects in years per each category
      - Line plot of monthly ratio of succesful projects by year
-  3.3.5 Post-EDA Adjustments
+  3.3.5 Post-EDA Adjustments - outliers that are further than 3 standard deviations from mean are removed, and new cleaned version of the dataframe is created.
+  3.3.6 Pre-modeling check
+       - Exports describing statistics of the treated data
+       - Shows covariance and correlations among variables, if the use conditions of the models still stay true
+       - Histograms and box plots of treated distributions of all numberic variables
+       - Bar plots of the number of project in each category and in each month to show the distribution of categorical variables
+  3.3.7 Additional graphics for export - many graphics used in the thesis are generated here
+      - Box plots of distribution of goal size in individual categories (both in nominal and real monetary value), also by success
+      - Line plot of goal quantiles per category
+      - Line plot and scatter plot of the share of succesful project in each goal quantile, also overlayd by bar plot showing the size of the quantiles
+      - Line and scatter plot of the share of succesful project in each 1/10 interval of the range of goal, overlaid with the number of observations in the interval
+      - Scatter plot of the share of succesful project in each 1/10 interval of the range of goal, size of the point showing number of observations in the interval
+      - Line plot of ratio of succesful projects over Campaign Goal quantiles and intervals by category (many versions)
+      - Comparison plots showing the estimate of the relationship between the goal and success rate per category using: a) linear trend b) logistic trend c) LOESS
+      - Flying box plots of Goal by Category per Year, using real and nominal value of goal and also version including outliers
+   3.3.8 Modelling - includes the models used and exports of their outputs to Microsoft Word and quality checks, pointing to the fact that some variables were probably                            missing (visible autocorrelation of residuals) or other misspecification occured
+        3.3.8.1 - General model uncompounded (*model (1)*)- Basic model using logistic regression to predict success of a project based on other variables
+        3.3.8.2 - General model compounded (*model (2)*)- Based on *model 1*, uses real monetary values
+        + ROC to both models *(1)* and *(2)*, VIF calculation
+        3.3.8.3.1 - Interactions model uncompounded (*model (3)*)
+        
    
