@@ -52,6 +52,16 @@ Included files & Story of the project:
         3.3.8.1 - General model uncompounded (*model (1)*)- Basic model using logistic regression to predict success of a project based on other variables
         3.3.8.2 - General model compounded (*model (2)*)- Based on *model 1*, uses real monetary values
         + ROC to both models *(1)* and *(2)*, VIF calculation
-        3.3.8.3.1 - Interactions model uncompounded (*model (3)*)
-        
+        3.3.8.3.1 - Interactions model uncompounded (*model (3)*) plus its ROC curve, residuals plot and pair plot showing predictions per category
+        + dataframe is re-encoded so categorial variables are encoded numerically and mapped (the used GAM library cannot work with categorical variables itself)
+        + function twinsubplot is defined to help generate twin plots equivalent to those used in 3.3.7 to show GAM prediction curves
+        8.3.8.3.2 - GAM model *(4)* with tensor smoothing and no regularization is used. The output is messy.
+        8.3.8.3.3 - GAM model *(4b)* with regularization coefficient lambda calculated based on standard rules such as AIC. Has lower R2 than logistic model *(3)*
+        8.3.8.3.4 - GAM model *(4c)*, with regularization coefficient lambda calculated to equal the explorative power (R2) of model *(3)*
+        8.3.8.3.5 - Smoothed GAM model *(5)*, using the same amount of regularization as model *(4c)*
+        8.3.8.3.6 - Bar plot of the effect of adding more videos to a crowdfinding campaing enabled by the smoothed model *(5)*
+        8.3.8.3.7 - Number of final plots of the influence of goal on success probability are exported based on model *(4c)*
+        8.3.8.3.8 - ROC of semiparametric *(4c)* and smoothed *(5)* model are compared
+        8.3.8.3.9 - Estimate of categorial effects of months based on outputs of previous model
+        8.3.8.3.10 -  summary of models' results is included
    
